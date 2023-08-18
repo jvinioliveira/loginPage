@@ -10,6 +10,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+::selection {
+  background-color: #076001;
+  color: #FFF;
+}
 header {
   height: 140px;
   width: 100%;
@@ -92,6 +96,14 @@ label {
   color: #fff;
   margin-bottom: 20px;
 }
+.signIn ::selection {
+  color: #fff;
+  background-color: #FFF;
+}
+.signIn::selection {
+  color: var(--txColor);
+  background: #fff;
+}
 .signUp {
   display: flex;
   justify-content: center;
@@ -99,7 +111,6 @@ label {
   text-decoration: none;
   color: var(--txColor);
 }
-
 footer {
   display: flex;
   justify-content: center;
