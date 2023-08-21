@@ -16,34 +16,37 @@
     </header>
 
     <section>
-      <div class="container">
-        <div class="content">
-          <h1 class="title">Bem vindo de Volta</h1>
-          <p class="subtitle">Por favor insira suas informações.</p>
-
-          <div class="info">
-            <label for="email">E-mail</label> <br>
-            <input type="email" id="email" pattern=".+@.+\..+" size="40" required placeholder="Insira seu E-mail"/> <br>
-            <label for="pass">Senha</label> <br>
-            <input type="password" id="passInput" name="password" minlength="6" size="40" placeholder="••••••••"/>
-            <span id="showPassIcon" aria-hidden="true">
-              <i class="fi fi-rr-eye"></i>
-            </span>
-          </div>
+        <div class="container">
+          <div class="content">
+            <h1 class="title">Bem vindo de Volta</h1>
+            <p class="subtitle">Por favor insira suas informações.</p>
+            <div class="labelFloat">
+              <label for="email">E-mail *</label> <br>
+              <input type="email" id="email" pattern=".+@.+\..+" size="40" required placeholder="Insira seu E-mail"/>
+            </div>
+            <div class="labelFloat">
+              <label for="passInput">Senha *</label> <br>
+              <input type="password" id="passInput" name="password" minlength="6" size="40" placeholder="••••••••" required/>
+              <span id="showPassIcon" aria-hidden="true">
+                <i class="fi fi-rr-eye"></i>
+              </span>
+            </div>
             <div>
               <a href="#" class="forgotPass">Esqueci a senha</a>
-              <a href="index.html" class="signIn">Entrar</a>
-              <a href="signup.html" class="signUp">Não tem uma conta? Cadastre-se</a>
+              <input type="submit" value="Entrar" class="signInBtn">
             </div>
+            <div class="signUpLink">
+              <p>Não tem uma conta? <a href="signup.html">Cadastre-se</a></p>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
 
     <footer>
       <p>&copy JV</p>
     </footer>
 
-    <!-- Java Script -->
+    <!-- JavaScript -->
     <script src="../js/signin.js"></script>
   </body>
 </html>

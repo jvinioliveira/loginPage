@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-</head>
-<body>
-  <h1>Cadastro</h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Link Styles -->
+    <link rel="stylesheet" href="../css/signup.css" />
+    <!-- Link CDN icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"/>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <header>
+      <a href="signin.html"><img src="../img/JV-Logo-Green.svg" alt="Logo" class="logo-header"/></a>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="content">
+          <h1 class="title">Seja Bem Vindo</h1>
+            <p class="subtitle">Por favor, realize seu cadastro abaixo.</p>
+              <form method="post">
+                <div class="labelFloat">
+                  <label for="name"><i class="fi fi-rs-user"></i></label>
+                  <input type="text" id="name" name="name" size="32" required placeholder="Nome *">
+                </div>
+                <div class="labelFloat">
+                  <label for="email"><i class="fi fi-rs-envelope"></i></label>
+                  <input type="email" id="email" pattern=".+@.+\..+" size="32" required placeholder="E-mail *">
+                </div>
+                <div class="labelFloat">
+                  <label for="passInput"><i class="fi fi-rr-lock"></i></label>
+                  <input type="password" id="passInput" name="password" minlength="6" size="25" required placeholder="Senha *"/>
+                  <span id="showPassIcon" aria-hidden="true">
+                    <i class="fi fi-rr-eye"></i>
+                  </span>
+                </div>
+                  <div class="labelFloat">
+                    <label for="passInputConfirm"><i class="fi fi-rs-key-skeleton-left-right"></i></label>
+                    <input type="password" id="passInputConfirm" name="password" minlength="6" size="25" required placeholder="Confirmar Senha *"/>
+                    <span id="showPassIconConfirm" aria-hidden="true">
+                      <i class="fi fi-rr-eye"></i>
+                    </span>
+                  </div>
+                <input type="submit" value="Cadastrar" class="btnSingUp">
+            </form>
+            <div class="signInLink">
+              <p>Já tem uma conta? <a href="signin.html">Faça login aqui</a></p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy JV</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/signup.js"></script>
+  </body>
 </html>

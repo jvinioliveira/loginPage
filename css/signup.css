@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
 :root {
@@ -10,7 +11,7 @@
   font-family: 'Poppins', sans-serif;
 }
 ::selection {
-  background-color: var(--txColor);
+  background-color: #076001;
   color: #FFF;
 }
 .logo-header {
@@ -52,6 +53,11 @@
   margin-bottom: 10px;
   font-size: 0.9em;
 }
+.labelFloat i{
+  position: relative;
+  padding-right: 3px;
+  top: 2px;
+}
 .labelFloat input {
   color: var(--txColor);
   border-radius: 10px;
@@ -65,21 +71,12 @@
 }
 .labelFloat span {
   position: absolute;
-  right: 20px;
-  transform: translateY(13px);
+  top: 12px;
+  transform: translateX(-25px);
   cursor: pointer;
 }
-.forgotPass {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: var(--txColor);
-  font-size: 0.7em;
-  text-decoration: none;
-  margin-bottom: 16px;
-  padding-right: 10px;
-}
-.signInBtn {
+.btnSingUp {
+  margin-top: 20px;
   border: 2px solid transparent;
   width: 100%;
   background-color: var(--txColor);
@@ -90,10 +87,10 @@
   cursor: pointer;
   transition: 0.2s;
 }
-.signInBtn:hover {
+.btnSingUp:hover {
   background: #074703;
 }
-.signUpLink {
+.signInLink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +98,7 @@
   text-decoration: none;
   color: var(--txColor);
 }
-.signUpLink a {
+.signInLink a {
   font-weight: bold;
   text-decoration: none;
   color: var(--txColor);
@@ -109,8 +106,8 @@
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 10vh;
   width: 100%;
   color: var(--txColor);
-  align-items: center;
 }
