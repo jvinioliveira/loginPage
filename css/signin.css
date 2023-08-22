@@ -31,9 +31,7 @@
   padding: 40px 20px;
 }
 .content h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 2em;
   color: #075402;
   margin-bottom: 3px;
@@ -52,6 +50,9 @@
   margin-bottom: 10px;
   font-size: 0.9em;
 }
+.labelFloat label {
+  pointer-events: none;  
+}
 .labelFloat input {
   color: var(--txColor);
   border-radius: 10px;
@@ -59,9 +60,10 @@
   line-height: 160%;
   padding: 5px 10px;
   margin: 6px 0px;
+  outline-color: #07600190;
 }
 .labelFloat ::placeholder {
-  color: rgba(7, 96, 1, 0.5);
+  color: #07600180;
 }
 .labelFloat span {
   position: absolute;
@@ -70,14 +72,12 @@
   cursor: pointer;
 }
 .forgotPass {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   color: var(--txColor);
   font-size: 0.7em;
   text-decoration: none;
-  margin-bottom: 16px;
-  padding-right: 10px;
+}
+.forgotPass:hover{
+  font-weight: bold;
 }
 .signInBtn {
   border: 2px solid transparent;
@@ -86,17 +86,17 @@
   border-radius: 20px;
   height: 35px;
   color: #fff;
-  margin-bottom: 20px;
+  margin: 18px 0px;
+  transition: .2s;
   cursor: pointer;
-  transition: 0.2s;
 }
 .signInBtn:hover {
-  background: #074703;
+  background: #ffffff;
+  color: var(--txColor);
+  border: 2px solid var(--txColor);
 }
 .signUpLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 0.7em;
   text-decoration: none;
   color: var(--txColor);
@@ -105,7 +105,11 @@
   font-weight: bold;
   text-decoration: none;
   color: var(--txColor);
+  transition: .2s;
 }
+.signUpLink a:hover {
+  color: #07600198;
+  }
 footer {
   display: flex;
   justify-content: center;

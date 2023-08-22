@@ -27,14 +27,13 @@
   width: 100%;
 }
 .content {
+  width: 50vh;
   border: 2px solid var(--txColor);
   border-radius: 20px;
   padding: 40px 20px;
 }
 .content h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 2em;
   color: #075402;
   margin-bottom: 3px;
@@ -53,26 +52,30 @@
   margin-bottom: 10px;
   font-size: 0.9em;
 }
+.labelFloat label {
+  pointer-events: none;  
+}
 .labelFloat i{
-  position: relative;
-  padding-right: 3px;
-  top: 2px;
+  position: absolute;
+  top: 13px;
 }
 .labelFloat input {
+  position: relative;
   color: var(--txColor);
   border-radius: 10px;
   border: 1px solid var(--txColor);
   line-height: 160%;
   padding: 5px 10px;
   margin: 6px 0px;
+  outline-color: #07600190;
+  left: 10%;
 }
 .labelFloat ::placeholder {
-  color: rgba(7, 96, 1, 0.5);
+  color: #07600180;
 }
 .labelFloat span {
   position: absolute;
-  top: 12px;
-  transform: translateX(-25px);
+  top: 0px;
   cursor: pointer;
 }
 .btnSingUp {
@@ -85,15 +88,15 @@
   color: #fff;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: .2s;
 }
 .btnSingUp:hover {
-  background: #074703;
+  background: #ffffff;
+  color: var(--txColor);
+  border: 2px solid var(--txColor);
 }
 .signInLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 0.7em;
   text-decoration: none;
   color: var(--txColor);
@@ -102,6 +105,10 @@
   font-weight: bold;
   text-decoration: none;
   color: var(--txColor);
+  transition: .2s;
+}
+.signInLink a:hover {
+color: #07600198;
 }
 footer {
   display: flex;

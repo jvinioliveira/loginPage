@@ -22,28 +22,28 @@
             <p class="subtitle">Por favor, realize seu cadastro abaixo.</p>
               <form method="post">
                 <div class="labelFloat">
-                  <label for="name"><i class="fi fi-rs-user"></i></label>
-                  <input type="text" id="name" name="name" size="32" required placeholder="Nome *">
+                  <label for="name" id="labelName"><i class="fi fi-rs-user"></i> </label>
+                  <input type="text" id="name" name="name" size="35" required placeholder="Nome">
                 </div>
                 <div class="labelFloat">
-                  <label for="email"><i class="fi fi-rs-envelope"></i></label>
-                  <input type="email" id="email" pattern=".+@.+\..+" size="32" required placeholder="E-mail *">
+                  <label for="email" id="labelEmail"><i class="fi fi-rs-envelope"></i></label>
+                  <input type="email" id="email" pattern=".+@.+\..+" size="35" required placeholder="E-mail">
                 </div>
                 <div class="labelFloat">
-                  <label for="passInput"><i class="fi fi-rr-lock"></i></label>
-                  <input type="password" id="passInput" name="password" minlength="6" size="25" required placeholder="Senha *"/>
+                  <label for="passInput" id="labelPassInput"><i class="fi fi-rr-lock"></i></label>
+                  <input type="password" id="passInput" name="password" minlength="6" size="30" required placeholder="Senha"/>
                   <span id="showPassIcon" aria-hidden="true">
                     <i class="fi fi-rr-eye"></i>
                   </span>
                 </div>
                   <div class="labelFloat">
-                    <label for="passInputConfirm"><i class="fi fi-rs-key-skeleton-left-right"></i></label>
-                    <input type="password" id="passInputConfirm" name="password" minlength="6" size="25" required placeholder="Confirmar Senha *"/>
+                    <label for="passInputConfirm" id="labelpassInputConfirm"><i class="fi fi-rs-key-skeleton-left-right"></i></label>
+                    <input type="password" id="passInputConfirm" name="password" minlength="6" size="30" required placeholder="Confirmar Senha"/>
                     <span id="showPassIconConfirm" aria-hidden="true">
                       <i class="fi fi-rr-eye"></i>
                     </span>
                   </div>
-                <input type="submit" value="Cadastrar" class="btnSingUp">
+                <button onclick="signUp()" class="btnSingUp">Cadastrar</button>
             </form>
             <div class="signInLink">
               <p>Já tem uma conta? <a href="signin.html">Faça login aqui</a></p>
