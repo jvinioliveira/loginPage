@@ -78,7 +78,29 @@
   top: 0px;
   cursor: pointer;
 }
-.btnSingUp {
+#msgSuccess {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: var(--txColor);
+  border: 2px solid var(--txColor);
+  padding: 15px 5px;
+  border-radius: 20px;
+  background: #42fc3597;
+  display: none;
+}
+#msgError {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 15px 5px;
+  border-radius: 20px;
+  background: #ff505097;
+  display: none;
+}
+#btnSingUp {
   margin-top: 20px;
   border: 2px solid transparent;
   width: 100%;
@@ -90,7 +112,25 @@
   cursor: pointer;
   transition: .2s;
 }
-.btnSingUp:hover {
+#btnSingUp:hover {
+  background: #ffffff;
+  color: var(--txColor);
+  border: 2px solid var(--txColor);
+}
+#btnSingIn {
+  margin-top: 20px;
+  border: 2px solid transparent;
+  width: 100%;
+  background-color: var(--txColor);
+  border-radius: 20px;
+  height: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: .2s;
+  display: none;
+}
+#btnSingIn:hover {
   background: #ffffff;
   color: var(--txColor);
   border: 2px solid var(--txColor);

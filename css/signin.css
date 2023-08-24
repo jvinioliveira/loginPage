@@ -79,7 +79,7 @@
 .forgotPass:hover{
   font-weight: bold;
 }
-.signInBtn {
+.btnSingIn {
   border: 2px solid transparent;
   width: 100%;
   background-color: var(--txColor);
@@ -90,7 +90,7 @@
   transition: .2s;
   cursor: pointer;
 }
-.signInBtn:hover {
+.btnSingIn:hover {
   background: #ffffff;
   color: var(--txColor);
   border: 2px solid var(--txColor);

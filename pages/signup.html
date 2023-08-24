@@ -20,7 +20,7 @@
         <div class="content">
           <h1 class="title">Seja Bem Vindo</h1>
             <p class="subtitle">Por favor, realize seu cadastro abaixo.</p>
-              <form method="post">
+              <form>
                 <div class="labelFloat">
                   <label for="name" id="labelName"><i class="fi fi-rs-user"></i> </label>
                   <input type="text" id="name" name="name" size="35" required placeholder="Nome">
@@ -43,8 +43,11 @@
                       <i class="fi fi-rr-eye"></i>
                     </span>
                   </div>
-                <button onclick="signUp()" class="btnSingUp">Cadastrar</button>
-            </form>
+                </form>
+                <div id="msgSuccess"><span>Cadastro realizado com sucesso!</span></div>
+                <div id="msgError"><span>Oops! Parece que algo deu errado. Verifique os dados informados e tente novamente.</span></div>
+                <button onclick="signUp()" id="btnSingUp">Cadastrar</button>
+                <button onclick="signIn()" id="btnSingIn">Fazer Login</button>
             <div class="signInLink">
               <p>Já tem uma conta? <a href="signin.html">Faça login aqui</a></p>
             </div>
