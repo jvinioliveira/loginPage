@@ -14,10 +14,18 @@
   background-color: #076001;
   color: #FFF;
 }
-.logo-header {
-  display: block;
-  height: 20vh;
+header {
   width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo-header {
+  position: absolute;
+  display: flex;
+  width: 10em;
+  height: 10em;
+  left: 15vw;
 }
 .container {
   display: flex;
@@ -43,40 +51,8 @@
   justify-content: center;
   align-items: center;
   font-size: 0.7em;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: var(--txColor);
-}
-.labelFloat {
-  color: var(--txColor);
-  position: relative;
-  margin-bottom: 10px;
-  font-size: 0.9em;
-}
-.labelFloat label {
-  pointer-events: none;  
-}
-.labelFloat i{
-  position: absolute;
-  top: 13px;
-}
-.labelFloat input {
-  position: relative;
-  color: var(--txColor);
-  border-radius: 10px;
-  border: 1px solid var(--txColor);
-  line-height: 160%;
-  padding: 5px 10px;
-  margin: 6px 0px;
-  outline-color: #07600190;
-  left: 10%;
-}
-.labelFloat ::placeholder {
-  color: #07600180;
-}
-.labelFloat span {
-  position: absolute;
-  top: 0px;
-  cursor: pointer;
 }
 #msgSuccess {
   text-align: center;
@@ -86,8 +62,9 @@
   border: 2px solid var(--txColor);
   padding: 15px 5px;
   border-radius: 20px;
-  background: #42fc3597;
+  background: #42fc3541;
   display: none;
+  margin-bottom: 15px;
 }
 #msgError {
   text-align: center;
@@ -97,11 +74,54 @@
   border: 2px solid #ff0000;
   padding: 15px 5px;
   border-radius: 20px;
-  background: #ff505097;
+  background: #f95f5f41;
   display: none;
+  margin-bottom: 15px;
+}
+#msgError span::selection {
+  background: red;
+  color: #fff;
+}
+.labelFloat {
+  color: var(--txColor);
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+.labelFloat label {
+  pointer-events: none;  
+}
+.labelFloat i{
+  position: absolute;
+  top: 8px;
+}
+.labelFloat input {
+  position: relative;
+  color: var(--txColor);
+  border-radius: 10px;
+  border: 1px solid var(--txColor);
+  line-height: 160%;
+  padding: 5px 10px;
+  outline-color: #07600190;
+  left: 8%;
+}
+#name,
+#email {
+  width: 90%;
+}
+#passInput,
+#passInputConfirm {
+  width: 80%;
+}
+.labelFloat ::placeholder {
+  color: #07600180;
+}
+.labelFloat span {
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
 }
 #btnSingUp {
-  margin-top: 20px;
   border: 2px solid transparent;
   width: 100%;
   background-color: var(--txColor);
@@ -118,21 +138,20 @@
   border: 2px solid var(--txColor);
 }
 #btnSingIn {
-  margin-top: 20px;
-  border: 2px solid transparent;
+  border: 2px solid var(--txColor);
   width: 100%;
-  background-color: var(--txColor);
+  background-color: #fff;
   border-radius: 20px;
   height: 35px;
-  color: #fff;
+  color: var(--txColor);
   margin-bottom: 20px;
   cursor: pointer;
   transition: .2s;
   display: none;
 }
 #btnSingIn:hover {
-  background: #ffffff;
-  color: var(--txColor);
+  background: var(--txColor);
+  color: #fff;
   border: 2px solid var(--txColor);
 }
 .signInLink {
