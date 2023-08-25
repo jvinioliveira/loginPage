@@ -13,10 +13,18 @@
   background-color: var(--txColor);
   color: #FFF;
 }
-.logo-header {
-  display: block;
-  height: 20vh;
+header {
   width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo-header {
+  position: absolute;
+  display: flex;
+  width: 10em;
+  height: 10em;
+  left: 15vw;
 }
 .container {
   display: flex;
@@ -26,6 +34,7 @@
   width: 100%;
 }
 .content {
+  width: 50vh;
   border: 2px solid var(--txColor);
   border-radius: 20px;
   padding: 40px 20px;
@@ -41,8 +50,40 @@
   justify-content: center;
   align-items: center;
   font-size: 0.7em;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: var(--txColor);
+}
+#msgError {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 10px 5px;
+  border-radius: 20px;
+  background: #f95f5f41;
+  display: none;
+  margin-bottom: 15px;
+}
+#msgError span::selection {
+  background: red;
+  color: #fff;
+}
+#notFoundUser {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 10px 5px;
+  border-radius: 20px;
+  background: #f95f5f41;
+  display: none;
+  margin-bottom: 15px;
+}
+#notFoundUser span::selection {
+  background: red;
+  color: #fff;
 }
 .labelFloat {
   color: var(--txColor);
@@ -60,16 +101,34 @@
   line-height: 160%;
   padding: 5px 10px;
   margin: 6px 0px;
-  outline-color: #07600190;
+  outline-color: #076001;
+}
+#email{
+  width: 90%;
+}
+#passInput {
+  width: 80%;
 }
 .labelFloat ::placeholder {
   color: #07600180;
 }
-.labelFloat span {
-  position: absolute;
-  right: 20px;
-  transform: translateY(13px);
+#showPassIcon {
+  position: relative;
+  top: 3px;
+  right: 30px;
   cursor: pointer;
+}
+#correctEmail {
+  position: absolute;
+  right: 0px;
+  top: 33px;
+  display: none;
+}
+#correctPass {
+  position: absolute;
+  right: 30px;
+  top: 33px;
+  display: none;
 }
 .forgotPass {
   color: var(--txColor);
@@ -79,7 +138,7 @@
 .forgotPass:hover{
   font-weight: bold;
 }
-.btnSingIn {
+#btnSingIn {
   border: 2px solid transparent;
   width: 100%;
   background-color: var(--txColor);
@@ -90,7 +149,13 @@
   transition: .2s;
   cursor: pointer;
 }
-.btnSingIn:hover {
+.Msg1 {
+  display: block;
+}
+.Msg2 {
+  display: none;
+}
+#btnSingIn:hover {
   background: #ffffff;
   color: var(--txColor);
   border: 2px solid var(--txColor);

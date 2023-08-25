@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/signin.css" />
     <!-- Link CDN icons -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"/>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <!-- Title Page -->
     <title>Login Page</title>
   </head>
@@ -20,21 +21,24 @@
           <div class="content">
             <h1 class="title">Bem vindo de Volta</h1>
             <p class="subtitle">Por favor insira suas informações.</p>
+            <div id="msgError"><span>Oops! Parece que você deixou alguns campos em branco. Por favor, complete todos os campos necessários.</span></div>
+            <div id="notFoundUser"><span>Oops, parece que não encontramos nenhum cadastro correspondente às informações fornecidas. Verifique se digitou tudo corretamente ou faça o cadastro para continuar.</span></div>
             <div class="labelFloat">
-              <label for="email">E-mail *</label> <br>
-              <input type="email" id="email" pattern=".+@.+\..+" size="40" required placeholder="Insira seu E-mail"/>
+              <label for="email" id="labelEmail">E-mail</label> <br>
+              <input type="email" id="email" pattern=".+@.+\..+" size="40" required placeholder="Insira seu E-mail"/><span id="correctEmail"><i class="fi fi-rr-check"></i></span>
             </div>
             <div class="labelFloat">
-              <label for="passInput">Senha *</label> <br>
+              <label for="passInput" id="labelPass">Senha</label> <br>
               <input type="password" id="passInput" name="password" minlength="6" size="40" placeholder="••••••••" required/>
               <span id="showPassIcon" aria-hidden="true">
                 <i class="fi fi-rr-eye"></i>
               </span>
+              <span id="correctPass"><i class="fi fi-rr-check"></i></span>
             </div>
             <div>
               <a href="#" class="forgotPass">Esqueci a senha</a>
             </div>
-            <button class="btnSingIn">Entrar</button>
+            <button onclick="SignIn()" id="btnSingIn"><span class="Msg1">Entrar</span><span class="Msg2">Entrando...</span></button>
             <div class="signUpLink">
               <p>Não tem uma conta? <a href="signup.html">Cadastre-se</a></p>
             </div>

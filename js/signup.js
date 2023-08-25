@@ -47,8 +47,12 @@ nameInput.addEventListener('keyup', function() {
 });
 
 // Função para cadastrar E-mail
+function isValidEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailRegex.test(email);
+};
 email.addEventListener('keyup', function() {
-  if (!isValidEmail(email.value)) {
+  if (isValidEmail(email.value) == false) {
     labelEmail.setAttribute ('style', 'color: red');
     email.setAttribute ('style', 'border: 1px solid red; color: red;');
     email.placeholder = 'Insira um E-mail válido';
@@ -61,10 +65,6 @@ email.addEventListener('keyup', function() {
     validEmail = true;
   }
 });
-function isValidEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  return emailRegex.test(email);
-};
 
 // Função para cadastrar Senha
 passInput.addEventListener('keyup', function() {
